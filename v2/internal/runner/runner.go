@@ -526,7 +526,7 @@ func (r *Runner) displayExecutionInfo(store *loader.Store) {
 	messageStr := builder.String()
 	builder.Reset()
 
-	gologger.Info().Msgf("Using Nuclei Engine %s%s", config.Version, messageStr)
+	gologger.Info().Msgf("Using Qualishield Engine %s%s", config.Version, messageStr)
 
 	if r.templatesConfig != nil && r.templatesConfig.NucleiTemplatesLatestVersion != "" { // TODO extract duplicated logic
 		builder.WriteString(" (")
@@ -542,7 +542,7 @@ func (r *Runner) displayExecutionInfo(store *loader.Store) {
 	builder.Reset()
 
 	if r.templatesConfig != nil {
-		gologger.Info().Msgf("Using Nuclei Templates %s%s", r.templatesConfig.TemplateVersion, messageStr)
+		gologger.Info().Msgf("Using Qualishield Templates %s%s", r.templatesConfig.TemplateVersion, messageStr)
 	}
 	if len(store.Templates()) > 0 {
 		gologger.Info().Msgf("Templates added in last update: %d", r.countNewTemplates())
