@@ -11,7 +11,7 @@ var banner = fmt.Sprintf(`
   __   ___
  |  |   |
  |  |   |
- |__|   |%s
+ |__|   | /   %s
 `, config.Version)
 
 // showBanner is used to show the banner to the user
